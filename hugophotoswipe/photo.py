@@ -7,7 +7,7 @@ License: GPL v3.
 
 """
 
-from __future__ import print_function
+
 
 import hashlib
 import logging
@@ -75,7 +75,7 @@ class Photo(object):
             return img
 
         # get the orientation tag code from the ExifTags dict
-        orientation = next((k for k, v in ExifTags.TAGS.items() if v == 
+        orientation = next((k for k, v in list(ExifTags.TAGS.items()) if v == 
             'Orientation'), None)
         if orientation is None:
             print("Couldn't find orientation tag in ExifTags.TAGS")

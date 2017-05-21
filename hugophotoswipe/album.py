@@ -7,7 +7,7 @@ License: GPL v3.
 
 """
 
-from __future__ import print_function
+
 
 import logging
 import os
@@ -121,7 +121,7 @@ class Album(object):
             proptxt = ['']
         else:
             proptxt = ["%s = \"\"\"%s\"\"\"" % (k, v) for k, v in 
-                    self.properties.items()]
+                    list(self.properties.items())]
 
         txt = [
                 "+++",

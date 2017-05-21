@@ -85,13 +85,13 @@ class Settings(object):
         """ Check settings for consistency """
         prefix = "Error in settings file: "
         if self.markdown_dir is None:
-            print(prefix + "markdown_dir can't be empty")
+            print((prefix + "markdown_dir can't be empty"))
             return False
         if self.output_dir is None:
-            print(prefix + "output_dir can't be empty")
+            print((prefix + "output_dir can't be empty"))
             return False
         if self.use_smartcrop_js and self.smartcrop_js_path is None:
-            print(prefix + "smartcrop.js requested but path not set")
+            print((prefix + "smartcrop.js requested but path not set"))
             return False
         return True
 

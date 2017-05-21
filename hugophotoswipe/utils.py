@@ -7,7 +7,7 @@ License: GPL v3.
 
 """
 
-from __future__ import print_function
+
 
 import errno
 import os
@@ -61,7 +61,7 @@ def question_yes_no(question, default=True):
     else:
         extension = "[y/N]"
     while True:
-        user_input = input('%s %s ' % (question, extension))
+        user_input = eval(input('%s %s ' % (question, extension)))
         if user_input == 'q':
             raise SystemExit
         if user_input.lower() in ['y', 'yes']:
